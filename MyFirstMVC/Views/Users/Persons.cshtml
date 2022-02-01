@@ -1,0 +1,39 @@
+﻿@using MyFirstMVC.Models
+
+@*@model List<Persons>*@
+
+@*<ul style="list-style:none; color:red; text-align:center; margin-top:80px; letter-spacing:5px; font-size:30px; line-height:45px">
+        @{
+            foreach (var item in Model)
+            {
+                <li>
+                    @item
+                </li>
+            }
+        }
+    </ul>*@
+
+@*<ul style="list-style:none; color:red; text-align:center; margin-top:80px; letter-spacing:5px; font-size:30px; line-height:45px">
+    @{
+        var Person = Model;
+        <li style="line-height:5px;">
+            <h3>@Person</h3>
+            <h6 style="font-size:14px; text-transform:lowercase;">(@Person.Position)</h6><br />
+        </li>
+    }
+</ul>*@
+
+<body style="background-color:black;">
+    <ul style="list-style:none; color:red; text-align:center; margin-top:80px; letter-spacing:5px; font-size:30px; line-height:45px">
+        @{
+            List<Persons> Persons = Model;
+            foreach (var item in Persons)
+            {
+                <li style="line-height:5px;">
+                    <h3>@item</h3>
+                    <h6 style="font-size:14px; text-transform:lowercase;">(@item.Position)</h6><br />
+                </li>
+            }
+        }
+    </ul>
+</body>
